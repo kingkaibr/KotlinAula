@@ -13,8 +13,14 @@ private const val EVENTO_NOT_FOUND_MESSAGE = "Evento não encontrado!"
 class EventoService(private val repository: EventoRepository,
     private val converter: EventoConverter) {
 
-    fun listar(): List<EventoResponseDTO> {
-        return repository.findAll()
+    fun listar(
+        nomeEvento: String?): List<EventoResponseDTO> {
+        val eventos = if (nomeEvento == null) {
+            repository.findAll()
+        } else {
+            repository.findByNome(nomeEvento)
+        }
+        return eventos
             .map(converter::toEventoResponseDTO)
     }
 
