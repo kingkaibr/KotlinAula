@@ -7,8 +7,8 @@ interface TabelaProps {
 export default function Tabela(props: TabelaProps) {
     //… [Adicionar as funções do próximo slide aqui]
      return (
-        <table> 
-            <thead>
+        <table className="w-full rounded-xl overflow-hidden">
+            <thead className={`text-gray-100 bg-gradient-to-r from-indigo-500 to-indigo-800`}>
                 {renderHeader()} 
             </thead>
             <tbody>
