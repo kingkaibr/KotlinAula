@@ -29,12 +29,12 @@ export default function Tabela(props: TabelaProps) {
         function renderDados() {
             return props.eventos?.map((evento, i) => {
                 return ( 
-                    <tr key={evento.id}>
-                        <td>{evento.id}</td> 
-                        <td>{evento.nome}</td> 
-                        <td>{evento.data}</td>
-                        <td>{evento.descricao}</td> 
-                        <td>{evento.status}</td>
+                    <tr key={evento.id} className={`${i % 2 === 0 ? 'bg-indigo-200' : 'bg-indigo-100'} `}>
+                        <td className="text-left p-3">{evento.id}</td> 
+                        <td className="text-left p-3">{evento.nome}</td> 
+                        <td className="text-left p-3">{evento.data}</td>
+                        <td className="text-left p-3">{evento.descricao}</td> 
+                        <td className="text-left p-3">{evento.status}</td>
                     </tr>)
              })}
 }
