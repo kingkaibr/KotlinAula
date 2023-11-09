@@ -19,11 +19,11 @@ export default function Tabela(props: TabelaProps) {
         function renderHeader() {
             return (
                 <tr>
-                    <th>id</th> 
-                    <th>nome</th> 
-                    <th>data</th> 
-                    <th>descricao</th> 
-                    <th>status</th>
+                    <th className="text-left p-3">id</th> 
+                    <th className="text-left p-3">nome</th> 
+                    <th className="text-left p-3">data</th> 
+                    <th className="text-left p-3">descricao</th> 
+                    <th className="text-left p-3">status</th>
              </tr>)
         }
         function renderDados() {
