@@ -2,6 +2,8 @@ import Evento from "@/core/Evento"
 import { editIcon, trashIcon } from "../icones/tabelas"
 interface TabelaProps {
     eventos: Evento[]
+    eventoSelecionado?: (evento: Evento) => void
+    eventoExcluido?: (evento: Evento) => void
 }
 
 
